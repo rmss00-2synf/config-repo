@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: ${db-url:jdbc:postgresql://localhost:5432/moroccoexploredb}
+    driver-class-name: org.postgresql.Driver
+    username: ${db-username:postgres}
+    password: ${db-password:admin1234}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+

@@ -1,0 +1,20 @@
+# Configuration de la base de données PostgreSQL
+spring:
+  datasource:
+    url: ${db-url:jdbc:postgresql://localhost:5432/moroccoexploredb}
+    driver-class-name: org.postgresql.Driver
+    username: ${db-username:admin}
+    password: ${db-password:admin1234}
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: public
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  main:
+    allow-bean-definition-overriding: true
+
