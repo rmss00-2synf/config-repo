@@ -8,21 +8,21 @@ spring:
         - id: activity-service
           uri: lb://ACTIVITY-SERVICE
           predicates:
-            - Path=/api/**
+            - Path=/api/activity/**
           filters:
             - AuthenticationFilter
 
         - id: ai-itinerary-service
           uri: lb://AI-ITINERARY-SERVICE
           predicates:
-            - Path=/api/**
+            - Path=/api/itinerary/**
           filters:
             - AuthenticationFilter
 
         - id: ai-recommendation-service
           uri: lb://AI-RECOMMENDATION-SERVICE
           predicates:
-            - Path=/api/**
+            - Path=/api/recommendation/**
           filters:
             - AuthenticationFilter
 
