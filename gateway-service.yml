@@ -4,5 +4,33 @@ spring:
       discovery:
         locator:
           lower-case-service-id: true
+      routes:
+        - id: activity-service
+          uri: lb://ACTIVITY-SERVICE
+          predicates:
+            - Path=/api/**
+          filters:
+            - AuthenticationFilter
+
+        - id: ai-itinerary-service
+          uri: lb://AI-ITINERARY-SERVICE
+          predicates:
+            - Path=/api/**
+          filters:
+            - AuthenticationFilter
+
+        - id: ai-recommendation-service
+          uri: lb://AI-RECOMMENDATION-SERVICE
+          predicates:
+            - Path=/api/**
+          filters:
+            - AuthenticationFilter
+
+        - id: usermanagement-service
+          uri: lb://USERMANAGEMENT-SERVICE
+          predicates:
+            - Path=/auth/**
+          filters:
+            - AuthenticationFilter
 
 
