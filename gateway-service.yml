@@ -16,21 +16,21 @@ spring:
           uri: lb://AI-ITINERARY-SERVICE
           predicates:
             - Path=/api/itinerary/**
-          filters:
-            - AuthenticationFilter
+#          filters:
+#            - AuthenticationFilter
 
         - id: ai-recommendation-service
           uri: lb://AI-RECOMMENDATION-SERVICE
           predicates:
             - Path=/api/recommendation/**
-          filters:
-            - AuthenticationFilter
+#          filters:
+#            - AuthenticationFilter
 
         - id: usermanagement-service
           uri: lb://USERMANAGEMENT-SERVICE
           predicates:
             - Path=/auth/**
-          filters:
-            - AuthenticationFilter
+#          filters:
+#            - AuthenticationFilter
 
 
