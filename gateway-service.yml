@@ -29,7 +29,7 @@ spring:
         - id: usermanagement-service
           uri: lb://USERMANAGEMENT-SERVICE
           predicates:
-            - Path=/auth/**
+            - Path=/**
 #          filters:
 #            - AuthenticationFilter
 
